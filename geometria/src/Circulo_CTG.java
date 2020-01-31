@@ -6,7 +6,10 @@ public class Circulo_CTG extends FiguraGeometrica_CTG {
 	
 	public Circulo_CTG(double r, String tipoFigura) {
 		super(tipoFigura);
-		radio = r;
+		if (r < 0)
+			radio = r*(-1);
+		else
+			radio = r;
 	}
 
 	@Override
